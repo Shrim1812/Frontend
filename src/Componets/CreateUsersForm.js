@@ -24,7 +24,7 @@
 //     const handleCreate = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const res = await axios.post("http://localhost:5000/Ohkla/createUser", formData);
+//             const res = await axios.post("https://backend-6hdo.onrender.com/Ohkla/createUser", formData);
 //             setMessage(res.data.message);
 //         } catch (err) {
 //             setMessage(err.response?.data?.message || "Something went wrong");
@@ -82,7 +82,7 @@ const CreateUserForm = () => {
     const handleCreate = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/Ohkla/createUser", formData);
+            const res = await axios.post("https://backend-6hdo.onrender.com/Ohkla/createUser", formData);
             setMessage(res.data.message);
             setAlertType("success");
             setFormData({
