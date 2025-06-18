@@ -230,25 +230,6 @@ const DashboardUI = () => {
           </select>
         </div>
 
-     {/* <div className="col-md-4">
- <label>Payment Year(s)</label>
-<select
-  className="form-select"
-  multiple
-  size={3}      // Ye ek fixed visible option count dega, baaki scroll se dikhega
-  value={selectedYears}
-  onChange={(e) => {
-    const options = Array.from(e.target.selectedOptions, option => option.value);
-    setSelectedYears(options);
-  }}
->
-  <option value="All">All</option>
-  {years.map((year, idx) => (
-    <option key={idx} value={year}>{year}</option>
-  ))}
-</select>
-
-</div> */}
 <div className="col-md-4">
   <label>Payment Year(s)</label>
   <Select
