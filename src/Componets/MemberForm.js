@@ -41,7 +41,7 @@ const MemberForm = () => {
  useEffect(() => {
   const fetchYears = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Ohkla/getYearRange');
+      const res = await axios.get('https://backend-6hdo.onrender.com/Ohkla/getYearRange');
       if (res.data.years && res.data.years.length > 0) {
         setYears(res.data.years);
         setSelectedYear(res.data.years[0]); // default latest year
@@ -119,7 +119,7 @@ const MemberForm = () => {
         if (!validate()) return;
 
         try {
-            const yearRes = await axios.get('http://localhost:5000/Ohkla/getYearRange');
+            const yearRes = await axios.get('https://backend-6hdo.onrender.com/Ohkla/getYearRange');
             const years = yearRes.data.years;
 
             if (!years || years.length === 0) {
@@ -129,7 +129,7 @@ const MemberForm = () => {
 
             const latestYear = years[0];
             console.log("📅 Inserting AnnualPayment for Year:", latestYear);
-            const paymentResponse = await axios.post('http://localhost:5000/Ohkla/insertAnnualPayments', formData);
+            const paymentResponse = await axios.post('https://backend-6hdo.onrender.com/Ohkla/insertAnnualPayments', formData);
 
             alert(paymentResponse.data.message);
 
