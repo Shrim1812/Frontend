@@ -16,7 +16,7 @@ const ForgotPassword = () => {
             return;
         }
         try {
-            const res = await axios.post("http://localhost:5000/Ohkla/reset-password", {
+            const res = await axios.post("https://backend-6hdo.onrender.com/Ohkla/reset-password", {
                 email,
                 otp,
                 newPassword,
