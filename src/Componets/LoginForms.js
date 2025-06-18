@@ -16,11 +16,14 @@ const LoginForm = () => {
         setError("");
 
         try {
-            const res = await axios.post("https://backend-6hdo.onrender.com/Ohkla/login", {
-                email,
-                password,
-            });
+           const res = await axios.post("https://backend-6hdo.onrender.com/Ohkla/login", {
+         email,
+         password,
+      });
+
             console.log(res);
+            console.log("email:"+email);
+            console.log("password:"+assword);
             const { user } = res.data;
             console.log(res.data);
             localStorage.setItem("role", user.role);
