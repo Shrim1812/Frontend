@@ -89,10 +89,17 @@ function PaymentForm() {
         try {
             setIsLoadingData(true);
 
+
+            if (!selectedId || !selectedYear) {
+  alert("Member ID ya Year missing hai");
+  return;
+}
+
             if (paymentType === "Annual") {
-                const { data } = await axios.get(
-                    `https://backend-6hdo.onrender.com/Ohkla/getMemberAndPaymentSummaryById/${selectedId}/${selectedYear}`
-                );
+               const { data } = await axios.get(
+  `https://backend-6hdo.onrender.com/Ohkla/getMemberAndPaymentSummaryById/${selectedId}/${selectedYear}`
+);
+
 
                 if (data && Object.keys(data).length > 0) {
                     setMember(data);
