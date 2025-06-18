@@ -20,9 +20,9 @@ const LoginForm = () => {
                 email,
                 password,
             });
-
+            console.log(res);
             const { user } = res.data;
-
+            console.log(res.data);
             localStorage.setItem("role", user.role);
             localStorage.setItem("username", user.name);
             localStorage.setItem("email", email);
