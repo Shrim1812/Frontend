@@ -23,7 +23,7 @@ const LoginForm = () => {
 
             console.log(res);
             console.log("email:"+email);
-            console.log("password:"+assword);
+            console.log("password:"+password);
             const { user } = res.data;
             console.log(res.data);
             localStorage.setItem("role", user.role);
